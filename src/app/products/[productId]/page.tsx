@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 
-export const generateMetadata = async ({ params }: props): Metadata => {
+export const generateMetadata = async ({
+  params,
+}: props): Promise<Metadata> => {
   const title = await new Promise((resolve) => {
     setTimeout(() => {
       resolve(`iphone ${params.productId}`);
